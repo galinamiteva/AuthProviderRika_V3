@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AuthProviderRika_V2.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20241107222040_init")]
+    [Migration("20241107234434_init")]
     partial class init
     {
         /// <inheritdoc />
