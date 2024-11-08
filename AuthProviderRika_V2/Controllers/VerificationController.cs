@@ -8,7 +8,8 @@ using System.Net;
 
 namespace AuthProviderRika_V2.Controllers;
 
-[Route("api/[controller]")]
+//[Route("api/[controller]")]
+[Route("api/auth/[controller]")]
 [ApiController]
 public class VerificationController(DataContext context, UserManager<UserEntity> userManager, HttpClient httpClient) : ControllerBase
 {
@@ -19,8 +20,9 @@ public class VerificationController(DataContext context, UserManager<UserEntity>
 
     [HttpPost("verify")]
     public async Task<IActionResult> VerifyEmail(VerificationMessage model)
-    {
+     {
         var apiUrl = "https://verificationprovider.azurewebsites.net/api/verify?code=jLihlJW42fADXRAA8zX7q0vMtutF8ZRACEp9AqhUwoO6AzFu91kZ6A%3D%3D";
+
 
         var response = await _httpClient.PostAsJsonAsync(apiUrl, model);
 

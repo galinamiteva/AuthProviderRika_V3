@@ -69,7 +69,7 @@ public class SignUpController(UserManager<UserEntity> userManager, ServiceBusSen
         catch (ServiceBusException ex)
         {
             Console.WriteLine($"Service Bus error: {ex.Message}");
-            return StatusCode(500, "Error sending verification code");
+            return StatusCode(500, "Error sending verification code-servicebus");
         }
         catch (Exception ex)
         {
