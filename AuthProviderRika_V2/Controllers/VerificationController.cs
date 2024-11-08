@@ -8,8 +8,8 @@ using System.Net;
 
 namespace AuthProviderRika_V2.Controllers;
 
-//[Route("api/[controller]")]
-[Route("api/auth/[controller]")]
+[Route("api/[controller]")]
+//[Route("api/auth/[controller]")]
 [ApiController]
 public class VerificationController(DataContext context, UserManager<UserEntity> userManager, HttpClient httpClient) : ControllerBase
 {
